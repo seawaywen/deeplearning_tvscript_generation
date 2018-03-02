@@ -66,7 +66,7 @@ print('\n'.join(text.split('\n')[view_sentence_range[0]:view_sentence_range[1]])
 # 
 # Return these dictionaries in the following tuple `(vocab_to_int, int_to_vocab)`
 
-# In[5]:
+# In[53]:
 
 import numpy as np
 import problem_unittests as tests
@@ -80,10 +80,10 @@ def create_lookup_tables(text):
     """
     # TODO: Implement Function
     vocabs = set(text)
-    print(len(vocabs))
-    vocab_2_int = {k : v for v, k in enumerate(vocabs)}
-    int_2_vocab = dict(enumerate(vocabs))
-    return vocab_2_int, int_2_vocab
+    #print(len(vocabs))
+    vocab_to_int = {k : v for v, k in enumerate(vocabs)}
+    int_to_vocab = dict(enumerate(vocabs))
+    return vocab_to_int, int_to_vocab
 
 
 """
